@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/et_hint"
+    tools:context=".UserprofileActivity"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#e6e600">
+
+            <ImageView
+                android:id="@+id/imageview_profile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_profile"
+                android:contentDescription="@string/profile" />
+
+            <TextView
+                android:id="@+id/title_profile_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageview_profile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:hint="@string/loading"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:background="@color/border_et"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageview_user"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_baseline_account_circle_24"
+                android:contentDescription="@string/user" />
+
+            <TextView
+                android:id="@+id/name_profile_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageview_user"
+                android:layout_marginStart="50dp"
+                android:hint="@string/loading"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+
+            <View
+                android:id="@+id/divider_email"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/name_profile_tv"
+                android:layout_marginTop="20dp"
+                android:background="@color/et_fill" />
+
+            <ImageView
+                android:id="@+id/imageview_amount"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/divider_email"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_email"
+                android:contentDescription="@string/email_address" />
+
+            <TextView
+                android:id="@+id/email_profile_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_email"
+                android:layout_alignStart="@id/imageview_amount"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/loading"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+
+            <View
+                android:id="@+id/divider_amount"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/email_profile_tv"
+                android:layout_marginTop="20dp"
+                android:background="@color/et_fill" />
+
+            <ImageView
+                android:id="@+id/imageview_date"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/divider_amount"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_dob"
+                android:contentDescription="@string/date_of_birth_dd_mm_yyyy" />
+
+            <TextView
+                android:id="@+id/date_balance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_amount"
+                android:layout_alignStart="@id/imageview_date"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/loading"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+
+            <View
+                android:id="@+id/divider_date"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/date_balance_tv"
+                android:layout_marginTop="20dp"
+                android:background="@color/et_fill" />
+
+            <ImageView
+                android:id="@+id/imageview_mobile"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/divider_date"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_phone"
+                android:contentDescription="@string/mobile_number" />
+
+            <TextView
+                android:id="@+id/mobile_profile_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_date"
+                android:layout_alignStart="@id/imageview_mobile"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/loading"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+
+            <ProgressBar
+                android:id="@+id/progressU"
+                style="?android:progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="10dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

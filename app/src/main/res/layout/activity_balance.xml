@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/et_hint"
+    tools:context=".BalanceActivity"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="#e6e600"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/title_balance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/your_account_balance_details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/et_fill"
+                tools:ignore="TextContrastCheck" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/border_et"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageview_user"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_baseline_account_circle_24"
+                android:contentDescription="@string/user" />
+
+            <TextView
+                android:id="@+id/email_balance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageview_user"
+                android:layout_marginStart="50dp"
+                android:hint="@string/loading"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+
+            <View
+                android:id="@+id/divider_email"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/email_balance_tv"
+                android:layout_marginTop="25dp"
+                android:background="@color/et_fill" />
+
+            <ImageView
+                android:id="@+id/imageview_amount"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/divider_email"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/ic_money"
+                android:contentDescription="@string/email_address" />
+
+            <TextView
+                android:id="@+id/amount_balance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_email"
+                android:layout_alignStart="@id/imageview_amount"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="25dp"
+                android:hint="@string/loading"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+
+            <View
+                android:id="@+id/divider_amount"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/amount_balance_tv"
+                android:layout_marginTop="25dp"
+                android:background="@color/et_fill" />
+
+            <ImageView
+                android:id="@+id/imageview_date"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/divider_amount"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/ic_dob"
+                android:contentDescription="@string/date_of_birth_dd_mm_yyyy" />
+
+            <TextView
+                android:id="@+id/date_balance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider_amount"
+                android:layout_alignStart="@id/imageview_date"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="25dp"
+                android:hint="@string/loading"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+
+            <ProgressBar
+                android:id="@+id/progressAB"
+                style="?android:progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="10dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

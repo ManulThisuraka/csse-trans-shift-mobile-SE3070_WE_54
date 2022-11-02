@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/et_hint"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/border_et"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/title_login_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/please_enter_your_details_to_login"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <TextView
+            android:id="@+id/email_login_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_login_tv"
+            android:layout_marginTop="50dp"
+            android:text="@string/email_address"
+            android:textColor="@color/tv_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_email"
+            android:layout_width="30dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/email_login_tv"
+            android:layout_alignBottom="@+id/email_login_et"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="9dp"
+            android:contentDescription="@string/eye"
+            android:src="@drawable/ic_baseline_account_circle_24" />
+
+        <EditText
+            android:id="@+id/email_login_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/email_login_tv"
+            android:layout_marginStart="35dp"
+            android:background="@drawable/border_et"
+            android:hint="@string/enter_your_email"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:padding="6dp"
+            android:textColor="@color/et_text"
+            android:textColorHint="@color/et_hint"
+            android:textSize="16sp"
+            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/psd_login_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_login_et"
+            android:layout_marginTop="10dp"
+            android:text="@string/password"
+            android:textColor="@color/tv_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/psd_shower"
+            android:layout_width="30dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/psd_login_tv"
+            android:layout_alignBottom="@+id/psd_login_et"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="9dp"
+            android:contentDescription="@string/eye" />
+
+        <EditText
+            android:id="@+id/psd_login_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/psd_login_tv"
+            android:layout_marginStart="35dp"
+            android:background="@drawable/border_et"
+            android:hint="@string/enter_your_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:padding="6dp"
+            android:textColor="@color/et_text"
+            android:textColorHint="@color/et_hint"
+            android:textSize="16sp"
+            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/psd_login_et"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="70dp"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            tools:ignore="DuplicateClickableBoundsCheck"
+            android:textColor="@android:color/black"
+            app:backgroundTint="#e6e600"/>
+
+        <Button
+            android:id="@+id/btn_forgot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_login"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="70dp"
+            android:text="@string/forgot_password"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            app:backgroundTint="#e6e600"/>
+
+        <ProgressBar
+            android:id="@+id/progressL"
+            style="?android:progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</ScrollView>
